@@ -15,12 +15,12 @@ public class Produto {
 		this.precoCusto = precoCusto;
 		this.percLucro = percLucro;
 		this.percIcms = percIcms;
+		calculaPrecoVenda();
 	}
 	
 	public void calculaPrecoVenda() {
-		this.precoVenda = precoCusto * percIcms;
-		this.precoVenda += precoCusto * percIcms;
-		this.precoVenda += precoCusto;
+		this.precoVenda = precoCusto + precoCusto * percIcms;
+		this.precoVenda += precoVenda * percLucro;
 	}
 	
 	public String getDescricao() {
@@ -53,6 +53,11 @@ public class Produto {
 	
 	@Override
 	public String toString() {
-		return "\nCodigo..........:";
+		return "\nCodigo.............: " + this.codigo +
+				"\nDescricao..........: " + this.descricao +
+				"\nPreço de custo.....: " + this.precoCusto +
+				"\nPreco de venda.....: " + this.precoVenda +
+				"\nPerc. Lucro........: " + this.percLucro +
+				"\nPerc. ICMS.........: " + this.percIcms;
 	}
 }

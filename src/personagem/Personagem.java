@@ -8,7 +8,7 @@ public class Personagem {
 	public Personagem(int id, String nome) {
 		this.id = id;
 		this.nome = nome;
-		this.pontos = 100;
+		this.pontos = 300;
 	}
 	
 	public void recebeGolpe(int aceleracao) {

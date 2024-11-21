@@ -9,6 +9,7 @@ public class ProdutoRepresentado extends Produto {
 			double precoCusto, double percLucro, double percIcms, double percRepresentacao) {
 		super(codigo, descricao, precoCusto, percLucro, percIcms);
 		this.percRepresentacao = percRepresentacao;
+		calculaPrecoVenda();
 	}
 
 	@Override
@@ -20,5 +21,15 @@ public class ProdutoRepresentado extends Produto {
 	public double getPercRepresentacao() {
 		return percRepresentacao;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "\nCodigo.............: " + this.getCodigo() +
+				"\nDescricao..........: " + this.getDescricao() +
+				"\nPreço de custo.....: " + this.getPrecoCusto() +
+				"\nPreco de venda.....: " + this.precoVenda +
+				"\nPerc. Lucro........: " + this.getPercLucro() +
+				"\nPerc. ICMS.........: " + this.getPercIcms() +
+				"\nPerc representacao.: " + this.percRepresentacao;
+	}
 }

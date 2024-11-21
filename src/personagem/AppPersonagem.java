@@ -8,13 +8,13 @@ public class AppPersonagem {
 		
 		
 		System.out.println("\n" + "-".repeat(80));
-		System.out.println("Recebendo golpe físico com aceleração = 2\n");
-		p.recebeGolpe(2);
+		System.out.println("Recebendo golpe físico com aceleração = 10\n");
+		p.recebeGolpe(10);
 		System.out.println("Pontos........: " + p.getPontos());
 		
 		System.out.println("-".repeat(80));
-		System.out.println("Recebendo golpe de arma manual com aceleração = 5\n");
-		p.recebeGolpe('m', 5);
+		System.out.println("Recebendo golpe de arma manual com aceleração = 12\n");
+		p.recebeGolpe('m', 12);
 		System.out.println("Pontos........: " + p.getPontos());
 		
 		System.out.println("-".repeat(80));
